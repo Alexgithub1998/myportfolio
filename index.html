@@ -1,0 +1,277 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Balaoro - Web Developer & Designer Portfolio</title>
+<style>
+  :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #ecf0f1;
+    --background-color: #1a1a1a;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent-color);
+  }
+
+  h1, h2 {
+    color: var(--accent-color);
+  }
+
+  .cube-container {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 2rem auto;
+  }
+
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+  }
+
+  .cube-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgba(52, 152, 219, 0.1);
+    backface-visibility: visible;
+  }
+
+  .front  { transform: rotateY(0deg) translateZ(100px); }
+  .right  { transform: rotateY(90deg) translateZ(100px); }
+  .back   { transform: rotateY(180deg) translateZ(100px); }
+  .left   { transform: rotateY(-90deg) translateZ(100px); }
+  .top    { transform: rotateX(90deg) translateZ(100px); }
+  .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+  @keyframes rotate {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+  .skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .skill {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .project {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .project:hover {
+    transform: translateY(-5px);
+  }
+
+  .project h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+  }
+
+  .project img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .contact {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .contact a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="home">
+      <h1>Alex Balaoro</h1>
+      <p>Web Developer & Graphic Designer</p>
+      
+      <div class="cube-container">
+        <div class="cube">
+          <div class="cube-face front">HTML</div>
+          <div class="cube-face back">CSS</div>
+          <div class="cube-face right">JS</div>
+          <div class="cube-face left">PHP</div>
+          <div class="cube-face top">MySQL</div>
+          <div class="cube-face bottom">WP</div>
+        </div>
+      </div>
+
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">PHP</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">WordPress</span>
+        <span class="skill">Photoshop</span>
+        <span class="skill">Figma</span>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Alex Balaoro, a passionate web developer and graphic designer based in San Rafael, Santo Domingo, Albay. With a keen eye for design and a love for coding, I specialize in creating modern, sophisticated web experiences that not only look great but also function flawlessly.</p>
+      <p>My journey in web development started with a fascination for how the internet works. Over the years, I've honed my skills in HTML, CSS, JavaScript, PHP, and MySQL, allowing me to build robust and dynamic websites from the ground up. I'm also well-versed in WordPress development, enabling me to create custom themes and plugins that cater to specific client needs.</p>
+      <p>As a graphic designer, I bring creativity and visual flair to every project. My proficiency in tools like Photoshop and Figma allows me to design stunning user interfaces and create engaging visual content that complements my web development work.</p>
+      <p>I'm always eager to take on new challenges and learn emerging technologies. My goal is to continue growing as a developer and designer, creating web solutions that make a positive impact on businesses and users alike.</p>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="images/webproject.jpg" alt="webproject" width="300" height="200">
+          <h3>Static Website Project</h3>
+          <p>This is a simple static website project I deployed on <a href="https://alexgithub1998.github.io/webdev-project/" target="_blank">Github pages</a>.</p>
+        </div>
+        <div class="project">
+          <img src="images/BlotterPH.jpg" alt="SAAS-project" width="300" height="200">
+          <h3>Software as a Service (SaaS) Project</h3>
+          <p>I’m currently developing a SaaS project focused on a complaint-handling system, designed to streamline the reporting and tracking of issues, empowering users to voice their concerns and connect with the right authorities for action. Her name is "BlotterPH".</p>
+        </div>
+        <div class="project">
+          <img src="images/DIYMusicbanner.jpg" alt="Graphicdesign-project" width="300" height="200">
+          <h3>Graphic Design Project</h3>
+          <p>Recently, I’ve been exploring and experimenting with graphic design, diving into new creative techniques and refining my skills to bring visual ideas to life.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <p>Based in San Rafael, Santo Domingo, Albay</p>
+      <p>Email: <a href="contact.html">alexbalaoro45@gmail.com</a></p>
+      <p>Phone: <a href="tel:+63979758523">+63 979 758 523</a></p>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Add active class to navigation items based on scroll position
+      window.addEventListener('scroll', () => {
+        let scrollPosition = window.scrollY;
+        document.querySelectorAll('section').forEach(section => {
+          if (scrollPosition >= section.offsetTop - 100 && scrollPosition < (section.offsetTop + section.offsetHeight - 100)) {
+            let currentId = section.attributes.id.value;
+            removeAllActiveClasses();
+            addActiveClass(currentId);
+          }
+        });
+      });
+
+      function removeAllActiveClasses() {
+        document.querySelectorAll("nav a").forEach((el) => {
+          el.classList.remove("active");
+        });
+      }
+
+      function addActiveClass(id) {
+        let selector = `nav a[href="#${id}"]`;
+        document.querySelector(selector).classList.add("active");
+      }
+    });
+  </script>
+</body>
+</html>
